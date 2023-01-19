@@ -9,9 +9,17 @@ gsecret_auth_config(app)
 \arguments{
 \item{app}{\itemize{
 \item an oauth authenicator app containing a client id/secret
-see \code{\link[gargle:gargle_app]{gargle::gargle_app()}}.
 }}
 }
 \description{
-Configure the authentication
+The code needs an authenicator app (client id/secret pair) in order to
+get credentials from google cloud.  gsecretR does not come with a default
+app.  The \href{https://gargle.r-lib.org/}{gargle package} , which gsecretR uses extensively,
+provides a testing app, but it is NOT for production systems.
+
+see \code{\link[gargle:gargle_app]{gargle::gargle_app()}}.
+}
+\examples{
+gsecret_auth_config(gargle::gargle_app())
+
 }
