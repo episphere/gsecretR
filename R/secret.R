@@ -73,6 +73,8 @@ gsecret_auth<-function(email = gargle::gargle_oauth_email(),
   invisible(cred)
 }
 
+#' @rdname set_secret
+#' @export
 get_secret_version <- function(project_id,secret_id,version_id="latest"){
   token <- gsecret_token()
 
@@ -129,6 +131,21 @@ add_version_to_secret <- function(project_id,secret_id,b64_encoded_secret){
   gargle::request_make(req)
 }
 
+#' Set a secret on Google Cloud
+#' @description
+#' `set_secret()` assigns a secret to an id in project.
+#' `get_secret_version()` retrieves the secret with id from a project
+#' by default, `get_secret_version()` returns the latest version of a
+#' secret, but if you know the secret, you can select it by the version.
+#'
+#'
+#' @param project_id   the project storing (and charged for) the secret
+#' @param secret_id    the id of the secret
+#' @param secret       a string secret
+#' @param version_id   version id retrieved by get_secret_version
+#'
+#' @export
+#'
 set_secret <- function(project_id,secret_id,secret){
   token <- gsecret_token()
 
