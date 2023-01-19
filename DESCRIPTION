@@ -14,3 +14,4 @@ Imports:
     gargle,
     httr,
     jsonlite
+Roxygen: list(markdown = TRUE)

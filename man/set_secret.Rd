@@ -19,8 +19,8 @@ set_secret(project_id, secret_id, secret)
 \item{secret}{a string secret}
 }
 \description{
-`set_secret()` assigns a secret to an id in project.
-`get_secret_version()` retrieves the secret with id from a project
-by default, `get_secret_version()` returns the latest version of a
+\code{set_secret()} assigns a secret to an id in project.
+\code{get_secret_version()} retrieves the secret with id from a project
+by default, \code{get_secret_version()} returns the latest version of a
 secret, but if you know the secret, you can select it by the version.
 }

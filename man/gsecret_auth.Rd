@@ -30,6 +30,7 @@ gsecret_auth(
 A token
 }
 \description{
-Authorize gsecretR to access or create secrets stored in Secret Manager on Google Cloud Platform.
-This function is based on [bigrquery::bq_auth()] and also wraps [gargle::token_fetch()].
+Authorize gsecretR to access or create secrets stored in Secret
+Manager on Google Cloud Platform. This function is based on
+\code{\link[bigrquery:bq_auth]{bigrquery::bq_auth()}} and also wraps \code{\link[gargle:token_fetch]{gargle::token_fetch()}}.
 }
