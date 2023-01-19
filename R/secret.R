@@ -6,6 +6,13 @@
   # cred = NULL
 )
 
+#' Configure the authentication
+#'
+#' @param app - an oauth authenicator app containing a client id/secret
+#' see [gargle::gargle_app()].
+#'
+#' @export
+#'
 gsecret_auth_config<-function(app){
   .auth$set_app(app)
 }
