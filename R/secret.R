@@ -33,9 +33,9 @@ gsecret_base_url <- function(){
 
 #' Authorize gsecretR
 #'
-#' @description
-#' Authorize gsecretR to access or create secrets stored in Secret Manager on Google Cloud Platform.
-#' This function is based on [bigrquery::bq_auth()] and also wraps [gargle::token_fetch()].
+#' @description Authorize gsecretR to access or create secrets stored in Secret
+#' Manager on Google Cloud Platform. This function is based on
+#' [bigrquery::bq_auth()] and also wraps [gargle::token_fetch()].
 #'
 #'
 #' @param email Optional, your google identity
