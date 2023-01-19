@@ -2,4 +2,5 @@
 
 export(get_secret_version)
 export(gsecret_auth)
+export(gsecret_auth_config)
 export(set_secret)
