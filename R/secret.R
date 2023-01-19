@@ -8,10 +8,19 @@
 
 #' Configure the authentication
 #'
-#' @param app - an oauth authenicator app containing a client id/secret
+#' @description
+#' The code needs an authenicator app (client id/secret pair) in order to
+#' get credentials from google cloud.  gsecretR does not come with a default
+#' app.  The [gargle package](https://gargle.r-lib.org/) , which gsecretR uses extensively,
+#' provides a testing app, but it is NOT for production systems.
+#'
 #' see [gargle::gargle_app()].
 #'
+#' @param app - an oauth authenicator app containing a client id/secret
+#'
 #' @export
+#' @examples
+#' gsecret_auth_config(gargle::gargle_app())
 #'
 gsecret_auth_config<-function(app){
   .auth$set_app(app)
