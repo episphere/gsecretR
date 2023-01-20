@@ -23,3 +23,14 @@ gsecret_auth_config(gargle::gargle_app())
 
 However, using the gargle_app is discourage and the gargle developers
 may remove the app or rotate the values.
+
+To set a secret:
+
+``
+gsecret::set_secret(project_id="<project>",secret_id="<string>",secret="<the secret>")
+secret = gsecret::get_secret_version(project_id="<project>",secret_id="<string>")
+``
+
+You can get an old version of the secret by adding `version="version"` as a parameter.  
+The version ids can be obtain from the google console.  I'm looking to see if the APIs
+allow listing versions.
