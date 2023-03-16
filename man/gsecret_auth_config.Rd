@@ -17,9 +17,9 @@ get credentials from google cloud.  gsecretR does not come with a default
 app.  The \href{https://gargle.r-lib.org/}{gargle package} , which gsecretR uses extensively,
 provides a testing app, but it is NOT for production systems.
 
-see \code{\link[gargle:gargle_app]{gargle::gargle_app()}}.
-}
-\examples{
-gsecret_auth_config(gargle::gargle_app())
+You can use gargle default app, however, use of the default app is not recommended.
+see \code{\link[gargle:gargle_client]{gargle::gargle_client()}},\code{\link[gargle:gargle_oauth_client_from_json]{gargle::gargle_oauth_client()}} and \code{\link[gargle:gargle_oauth_client_from_json]{gargle::gargle_oauth_client_from_json()}}.
+old versions of gargle used \code{\link[gargle:oauth_app_from_json]{gargle::gargle_app()}}
 
+The gsecretR package requests the https://www.googleapis.com/auth/cloud-platform scope.
 }
